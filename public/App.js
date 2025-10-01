@@ -49,13 +49,11 @@ var IssueTable = /*#__PURE__*/function (_React$Component2) {
         style: rowStyle
       }, "Title"))), /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement(IssueRow, {
         rowStyle: rowStyle,
-        issueId: 1,
-        issueTitle: "Error in console when clicking Add"
-      }), /*#__PURE__*/React.createElement(IssueRow, {
+        issueId: 1
+      }, "Error in console when clicking Add"), /*#__PURE__*/React.createElement(IssueRow, {
         rowStyle: rowStyle,
-        issueId: 2,
-        issueTitle: "Missing border bottom on panel"
-      })));
+        issueId: 2
+      }, "Missing border bottom on panel")));
     }
   }]);
 }(React.Component);
@@ -73,7 +71,7 @@ var IssueRow = /*#__PURE__*/function (_React$Component3) {
         style: style
       }, this.props.issueId), /*#__PURE__*/React.createElement("td", {
         style: style
-      }, this.props.issueTitle));
+      }, this.props.children));
     }
   }]);
 }(React.Component);
