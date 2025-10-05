@@ -1,4 +1,4 @@
-const issues = [
+const initialIssues = [
         { id: 1, status: 'New', owner: 'Ravan', effort: 5, created: new Date('2019-01-15'), due: undefined, title: 'Error in console when clicking Add' },
         { id: 2, status: 'Assigned', owner: 'Eddie', effort: 14, created: new Date('2019-01-16'), due: new Date('2019-02-01'), title: 'Missing bottom border on panel' },
     ];
@@ -12,8 +12,12 @@ class IssueFilter extends React.Component {
 }
 
 class IssueTable extends React.Component {
+    constructor() {
+        super();
+        this.state = {issues: initialIssues}
+    }
     render() {
-        const issueRows = issues.map(issue => <IssueRow key={issue.id} issue={issue} />);
+        const issueRows = this.state.issues.map(issue => <IssueRow key={issue.id} issue={issue} />);
         return (
             <table className="bordered-table">
                 <thead>
